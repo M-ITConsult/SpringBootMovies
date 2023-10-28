@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="/styles.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>Movie</title>
+</head>
+<body>
+<h1>Update Movie</h1>
+<form action="/movie/update/{{id}}" method="post">
+    <label>Title: <input type="text" name="title"/></label>
+    <label>Description: <input type="text" name="description"/></label>
+    <button type="submit">Submit</button>
+</form><br>
+<button><a href="/movie">Back to list</a></button>
+</body>
+</html>

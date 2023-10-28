@@ -1,38 +1,40 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <link th:href="@{/styles.css}" rel="stylesheet" />
-  <title>Movie App</title>
-</head>
-<body>
-<h1>Movie list</h1>
-<form th:action="@{/movie/search}" method="post">
-  <label>Search: <input type="text" name="input"></label>
-  <button type="submit">Search</button><br><br>
-</form>
-<table>
-  <thead>
-  <tr>
-    <th>ID</th>
-    <th>Title</th>
-    <th>Action</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr th:each="movie : ${dtos}">
-    <td th:text="${movie.id}"/>
-    <td th:text="${movie.title}"/>
-    <td>
-      <button><a th:href="@{/movie/{id}(id = ${movie.id})}">Details</a></button>
-      <button><a th:href="@{/movie/update/{id}(id = ${movie.id})}">Update</a></button>
-      <button><a th:href="@{/movie/delete/{id}(id = ${movie.id})}">Delete</a></button>
-    </td>
-  </tr>
-  </tbody>
-</table>
-<button><a th:href="@{/movie/create}">Create new Movie</a></button>
-<button><a th:href="@{/movie/deleteAll}">Delete All</a></button>
+<!--ThymeLeaf index-->
 
-</body>
-</html>
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <link th:href="@{/styles.css}" rel="stylesheet" />-->
+<!--  <title>Movie App</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Movie list</h1>-->
+<!--<form th:action="@{/movie/search}" method="post">-->
+<!--  <label>Search: <input type="text" name="input"></label>-->
+<!--  <button type="submit">Search</button><br><br>-->
+<!--</form>-->
+<!--<table>-->
+<!--  <thead>-->
+<!--  <tr>-->
+<!--    <th>ID</th>-->
+<!--    <th>Title</th>-->
+<!--    <th>Action</th>-->
+<!--  </tr>-->
+<!--  </thead>-->
+<!--  <tbody>-->
+<!--  <tr th:each="movie : ${dtos}">-->
+<!--    <td th:text="${movie.id}"/>-->
+<!--    <td th:text="${movie.title}"/>-->
+<!--    <td>-->
+<!--      <button><a th:href="@{/movie/{id}(id = ${movie.id})}">Details</a></button>-->
+<!--      <button><a th:href="@{/movie/update/{id}(id = ${movie.id})}">Update</a></button>-->
+<!--      <button><a th:href="@{/movie/delete/{id}(id = ${movie.id})}">Delete</a></button>-->
+<!--    </td>-->
+<!--  </tr>-->
+<!--  </tbody>-->
+<!--</table>-->
+<!--<button><a th:href="@{/movie/create}">Create new Movie</a></button>-->
+<!--<button><a th:href="@{/movie/deleteAll}">Delete All</a></button>-->
+
+<!--</body>-->
+<!--</html>-->

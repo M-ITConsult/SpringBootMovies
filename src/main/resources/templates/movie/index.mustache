@@ -1,0 +1,41 @@
+<!--Mustache index-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="/styles.css" rel="stylesheet" />
+    <title>Movie App</title>
+</head>
+<body>
+<h1>Movie list</h1>
+<form action="/movie/search" method="post">
+    <label>Search: <input type="text" name="input"></label>
+    <button type="submit">Search</button><br><br>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#dtos}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{title}}</td>
+            <td>
+                <button><a href="/movie/{{id}}">Details</a></button>
+                <button><a href="/movie/update/{{id}}">Update</a></button>
+                <button><a href="/movie/delete/{{id}}">Delete</a></button>
+            </td>
+        </tr>
+    {{/dtos}}
+    </tbody>
+</table>
+<button><a href="/movie/create">Create new Movie</a></button>
+<button><a href="/movie/deleteAll">Delete All</a></button>
+</body>
+</html>

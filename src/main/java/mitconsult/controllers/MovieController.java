@@ -26,19 +26,19 @@ public class MovieController {
                             .map(MovieShortDTO::fromEntity)
                             .toList();
         model.addAttribute("dtos", dtos);
-        return "movie/index.html";
+        return "movie/index";
     }
 
     @GetMapping("/{id}")
     public String findOneById(@PathVariable Long id, Model model) {
         Movie movie = movieService.findById(id);
         model.addAttribute("movie", movie);
-        return "movie/detail.html";
+        return "movie/detail";
     }
     @GetMapping("/create")
     public String getCreate(Model model) {
         model.addAttribute("movieForm", new MovieForm());
-        return "movie/create.html";
+        return "movie/create";
     }
 
     @PostMapping("/create")
@@ -54,7 +54,7 @@ public class MovieController {
         MovieForm movieForm = MovieForm.fromEntity(movie);
         model.addAttribute("id", id);
         model.addAttribute("movieForm", movieForm);
-        return "movie/update.html";
+        return "movie/update";
     }
 
     @PostMapping("update/{id}")
@@ -77,7 +77,7 @@ public class MovieController {
                             .map(MovieShortDTO::fromEntity)
                             .toList();
         model.addAttribute("dtos",dtos);
-        return  "movie/index.html";
+        return  "movie/index";
     }
 
     @GetMapping("/deleteAll")
