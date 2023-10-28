@@ -16,7 +16,4 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     @Query("select m from Movie m where upper(m.title) like %:title%")
     List<Movie> searchByTitle(@Param("title") String title);
 
-    @Modifying
-    @Query("delete from Movie")
-    List<Movie> deleteAll(@Param("deleteAll") String deleteAll);
 }
