@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link th:href="@{/styles.css}" rel="stylesheet" />
     <meta charset="UTF-8">
     <title>Movie</title>
 </head>
@@ -11,6 +12,6 @@
     <label>Description: <input type="text" th:field="*{description}"/></label>
     <button type="submit">Submit</button>
 </form>
-<button><a style="text-decoration: none;" th:href="@{/movie}">Back to list</a></button>
+<button><a th:href="@{/movie}">Back to list</a></button>
 </body>
 </html>
