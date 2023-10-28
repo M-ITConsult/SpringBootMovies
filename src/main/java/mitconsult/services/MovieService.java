@@ -10,7 +10,7 @@ public interface MovieService {
     List<Movie> findAll();
 
     List<Movie> findManyByTitle(String title);
-   void deleteAll();
+    void deleteAll();
 
     Movie findById(Long id);
 
