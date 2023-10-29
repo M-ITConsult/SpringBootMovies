@@ -27,6 +27,7 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mustache
 	implementation("org.springframework.boot:spring-boot-starter-mustache:3.1.5")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("com.h2database:h2")
 	compileOnly("org.projectlombok:lombok")
 	runtimeOnly("org.postgresql:postgresql")
 	annotationProcessor("org.projectlombok:lombok")

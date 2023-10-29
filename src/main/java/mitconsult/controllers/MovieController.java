@@ -4,6 +4,7 @@ import mitconsult.models.dtos.MovieShortDTO;
 import mitconsult.models.entities.Movie;
 import mitconsult.models.forms.MovieForm;
 import mitconsult.services.impl.MovieServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,9 +13,12 @@ import org.springframework.web.bind.annotation.*;
 import java.awt.print.Book;
 import java.util.List;
 
+//@CrossOrigin(origins = "http://localhost:8081")
+//@RestController
 @Controller
 @RequestMapping("/movie")
 public class MovieController {
+//    @Autowired
     private final MovieServiceImpl movieService;
 
     public MovieController(MovieServiceImpl movieService) { this.movieService = movieService;}
