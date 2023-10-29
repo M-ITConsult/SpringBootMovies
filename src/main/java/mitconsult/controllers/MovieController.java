@@ -12,12 +12,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.awt.print.Book;
 import java.util.List;
-
+//test
 //@CrossOrigin(origins = "http://localhost:8081")
 //@RestController
 @Controller
+//test
 @RequestMapping("/movie")
 public class MovieController {
+    // test
 //    @Autowired
     private final MovieServiceImpl movieService;
 

@@ -14,4 +14,7 @@ public class Movie {
     private String title;
 
     private String description;
+
+    // test
+//    public Movie() {}
 }
