@@ -17,4 +17,5 @@ public interface MovieService {
     void update(Long id, Movie movie);
 
     void delete(Long id);
+
 }

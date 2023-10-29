@@ -7,11 +7,13 @@
 </head>
 <body>
 <h1>Update Movie</h1>
+{{#movieForm}}
 <form action="/movie/update/{{id}}" method="post">
-    <label>Title: <input type="text" name="title"/></label>
-    <label>Description: <input type="text" name="description"/></label>
+    <label>Title: <input type="text" name="title" value="{{title}}" required/></label>
+    <label>Description: <input type="text" name="description" value="{{description}}" required/></label>
     <button type="submit">Submit</button>
 </form><br>
+{{/movieForm}}
 <button><a href="/movie">Back to list</a></button>
 </body>
 </html>
