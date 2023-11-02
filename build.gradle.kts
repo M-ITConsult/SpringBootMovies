@@ -29,9 +29,10 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.h2database:h2")
 	compileOnly("org.projectlombok:lombok")
-	runtimeOnly("org.postgresql:postgresql")
+//	runtimeOnly("org.postgresql:postgresql")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation("org.springframework.boot:spring-boot-starter-validation:3.1.5")
 }
 
 tasks.withType<Test> {
